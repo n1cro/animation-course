@@ -1,0 +1,90 @@
+.offer {
+  width: 100%;
+  padding: 4rem 6rem;
+  padding-left: 7rem;
+  padding-top: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer_decore {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 42rem;
+  transform: rotate(-30deg);
+}
+
+.offer_headers {
+  text-transform: lowercase;
+  text-align: right;
+  margin-bottom: 2rem;
+  margin-top: 20rem;
+}
+.offer_title {
+  font-size: 11rem;
+  line-height: 1;
+  margin: 0;
+}
+.offer_subtitle {
+  font-weight: 300;
+  font-size: 1.7rem;
+}
+
+.offer_info {
+  position: relative;
+  align-self: baseline;
+  padding: 0.8rem 1rem;
+  border: .089rem solid var(--text-color);
+  border-radius: 1.2rem;
+}
+.offer_info-item {
+  margin: 1rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.offer_info::after {
+  content: "";
+  background: url('../images/pearl.png') no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: -1.5rem;
+  right: 3rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+@media (max-width: 768px) {
+  .offer {
+    padding: 2rem 2rem;
+  }
+  .offer_info {
+    font-weight: 400;
+    border: .1rem solid var(--text-color);
+    border-radius: 2rem;
+  }
+  .offer_info-item {
+    font-weight: 500;
+  }
+
+  .offer_headers {
+    margin-bottom: 20rem;
+    margin-top: 3rem;
+  }
+
+  .offer_decore {
+    width: 25rem;
+    top: 45%;
+  }
+
+  .offer_title {
+    padding-left: 3rem;
+    font-size: 8rem;
+  }
+  .offer_subtitle {
+    font-size: 1.7rem;
+    padding-left: 24rem;
+  }
+}

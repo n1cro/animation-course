@@ -1,0 +1,47 @@
+.why {
+  padding: 10rem 20rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.why_texts {
+  width: 30%;
+}
+.why_title {
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 3rem;
+  text-transform: lowercase;
+  font-size: 5.5rem;
+  line-height: 1;
+  font-weight: 200;
+}
+.why_descr {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.why_decore {
+  width: 50%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .why {
+    margin-bottom: 4rem;
+    flex-direction: column;
+    padding: 2rem 2rem;
+    align-items: baseline;
+  }
+  .why_texts {
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+  .why_decore {
+    width: 75%;
+    height: auto;
+    align-self: flex-end;
+  }
+}

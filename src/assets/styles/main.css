@@ -1,0 +1,82 @@
+@import '@csstools/normalize.css';
+@import 'fonts.css';
+@import 'offer.css';
+@import 'why.css';
+@import 'content.css';
+@import 'purchase.css';
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+:root {
+  --main-background: #0f1312;
+  --text-color: #F9EBDA;
+  --extra-font: 'Wagon';
+}
+
+html {
+  font-size: calc(100vw / 1920 * 16);
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+}
+
+:root * {
+  font-family: 'Gilroy', sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#app {
+  position: relative;
+  font-family: 'Gilroy', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+  color: var(--text-color);
+}
+
+#app::before {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#app::after {
+  content: "";
+  background: url('../images/noise-effect.png') repeat;
+  background-size: 50rem;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 47%;
+}
+
+.extra-text {
+  font-family: var(--extra-font);
+  font-weight: 200;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+

@@ -1,0 +1,175 @@
+.purchase {
+  padding: 4rem 8rem;
+  padding-top: 10rem;
+  position: relative;
+  display: flex;
+}
+
+.purchase_form-wrap {
+  width: 32%;
+  padding: 2rem 1.8rem;
+  background-color: var(--text-color);
+  border-radius: 1.2rem;
+  font-size: 1rem;
+  color: #000;
+}
+.purchase_form {
+  --input-radius: 1rem;
+  --input-padding: 1.2rem;
+  --input-gap: 1.4rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase_form-input {
+  padding: var(--input-padding);
+  background-color: transparent;
+  outline: none;
+  border: .09rem solid #000;
+  border-radius: var(--input-radius);
+  font-size: inherit;
+  margin-bottom: var(--input-gap);
+}
+.purchase_form-input::placeholder {
+  opacity: 1;
+}
+
+.purchase_form-submit {
+  padding: var(--input-padding);
+  background: #000;
+  color: var(--text-color);
+  outline: none;
+  border: none;
+  border-radius: var(--input-radius);
+  text-transform: uppercase;
+  font-size: inherit;
+  cursor: pointer;
+  margin-bottom: var(--input-gap);
+}
+
+.purchase_info {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.purchase_info::after {
+  content: '';
+  background: url('../images/purchase-decore.png') bottom no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 6rem;
+  width: 45rem;
+  height: 45rem;
+}
+
+.purchase_info-item {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: left;
+}
+.purchase_info-item .sale {
+  text-decoration: line-through;
+}
+.purchase_info-item b {
+  font-weight: 700;
+}
+
+.purchase_agree {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.purchase_agree a {
+  color: #000;
+}
+
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.styled-checkbox + .checkbox-label {
+  position: relative;
+  padding-left: 2.5rem;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5rem;
+}
+.styled-checkbox + .checkbox-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: .09rem solid #000;
+  border-radius: 0.25rem;
+}
+.styled-checkbox:checked + .checkbox-label::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.2rem;
+  width: 0.5rem;
+  height: 0.8rem;
+  border: solid #000;
+  border-width: 0 0.12rem 0.12rem 0;
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .purchase {
+    overflow: hidden;
+    padding: 5rem 3rem;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+
+  .purchase_form-wrap {
+    order: 2;
+    width: 100%;
+    padding: 4rem 1.8rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .purchase_info {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .purchase_info::after {
+    transform: rotate(-90deg);
+    width: 22rem;
+    height: 22rem;
+    top: 0;
+    right: -2rem;
+  }
+
+  .purchase_info-item {
+    margin-bottom: 4rem;
+  }
+
+  .purchase_form {
+    --input-radius: 0.5rem;
+    --input-padding: 1.7rem;
+    --input-gap: 1.7rem;
+  }
+
+  .purchase_agree label:before {
+    padding: 0.85rem;
+  }
+
+  .styled-checkbox:checked + .checkbox-label::after {
+    left: 0.5rem;
+    top: 0.2rem;
+    width: 0.7rem;
+    height: 1rem;
+    border-width: 0 0.12rem 0.12rem 0;
+  }
+}
